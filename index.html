@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#173B2A">
+  <meta name="description" content="Ceres — сервис совместных B2B-закупок для малого бизнеса.">
+  <title>Ceres — совместные B2B-закупки</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="#top" aria-label="Ceres">Ceres</a>
+  <nav>
+    <a href="#problem">Проблема</a><a href="#how">Как работает</a><a href="#economics">Экономика</a><a href="#research">Исследование</a><a href="#mvp">MVP</a>
+  </nav>
+  <a class="smallBtn" href="#demo">Демо</a>
+</header>
+
+<main id="top">
+<section class="hero wrap">
+  <div class="heroCopy">
+    <span class="eyebrow">B2B COLLECTIVE PROCUREMENT</span>
+    <h1>Сила большого заказа<br>без лишнего объёма.</h1>
+    <p class="lead">Ceres объединяет небольшие закупки разных компаний в единый закупочный объём, чтобы каждый участник мог покупать только необходимое ему количество и получать доступ к более выгодным объёмным условиям поставщика.</p>
+    <div class="actions"><a class="primary" href="#demo">Посмотреть механику</a><a class="secondary" href="#research">Данные исследования</a></div>
+    <p class="slogan">«Объединяя малое, получаем большее»</p>
+  </div>
+  <div class="heroPanel">
+    <div class="panelTop"><span>Демонстрационная закупка</span><b>POOL-1042</b></div>
+    <h3>Коробка для выпечки 180×180×70</h3>
+    <div class="priceRow"><div><small>Текущая ступень</small><strong id="heroPrice">25 ₽</strong></div><div class="right"><small>Следующая</small><strong class="gold">21 ₽</strong></div></div>
+    <div class="meter"><i id="heroMeter" style="width:74%"></i></div>
+    <div class="meterText"><span id="heroVolume">7 400 / 10 000 ед.</span><span>до 21 ₽</span></div>
+    <div class="tierMini"><span>1 000<b>40 ₽</b></span><span>3 000<b>30 ₽</b></span><span>5 000<b>25 ₽</b></span><span>10 000<b>21 ₽</b></span></div>
+  </div>
+</section>
+
+<section class="proofStrip">
+  <div><b>27</b><span>респондентов</span></div>
+  <div><b>92,6%</b><span>видят зависимость цены от объёма</span></div>
+  <div><b>77,8%</b><span>сталкиваются с переплатой</span></div>
+  <div><b>85,2%</b><span>готовы / скорее готовы объединяться</span></div>
+</section>
+
+<section id="problem" class="wrap section two">
+  <div><span class="eyebrow">ПРОБЛЕМА</span><h2>Малый заказ часто означает менее выгодные условия.</h2></div>
+  <div class="text"><p>Малые предприятия закупают сырьё, упаковку и расходные материалы небольшими партиями. При этом поставщики часто привязывают цену к объёму заказа.</p><p>Покупать огромный объём одному бизнесу тоже не всегда рационально: это может замораживать оборотные средства, требовать хранения и создавать риск излишков.</p><div class="quote">Ceres меняет не необходимое количество клиента, а <b>совокупный объём спроса.</b></div></div>
+</section>
+
+<section id="how" class="dark">
+  <div class="wrap section">
+    <span class="eyebrow goldText">МЕХАНИКА CERES</span><h2>Небольшой заказ каждого → большой общий объём → более выгодные условия.</h2>
+    <div class="steps">
+      <article><em>01</em><h3>Компания выбирает товар</h3><p>Указывает только то количество, которое действительно нужно бизнесу.</p></article>
+      <article><em>02</em><h3>Ceres объединяет спрос</h3><p>Подтверждённые объёмы независимых компаний формируют общий пул.</p></article>
+      <article><em>03</em><h3>Пул достигает ступени</h3><p>При достижении порога поставщика открывается соответствующая объёмная цена.</p></article>
+      <article><em>04</em><h3>Фиксируются условия</h3><p>Участник видит итоговую стоимость и фактический Net Saving после обязательных расходов.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="wrap section">
+  <div class="sectionHead"><div><span class="eyebrow">ИНТЕРАКТИВНОЕ ДЕМО</span><h2>Проверьте механику за 30 секунд.</h2></div><button class="reset" id="reset">Сбросить</button></div>
+  <div class="demoGrid">
+    <div class="demoCard">
+      <div class="status" id="status">Сбор объёма</div>
+      <h3>Коробка для выпечки 180×180×70</h3>
+      <div class="bigNumbers"><div><small>Общий объём</small><b id="pool">7 400</b><span>/ 10 000 ед.</span></div><div><small>Достигнутая цена</small><b id="price">25 ₽</b></div></div>
+      <div class="meter big"><i id="meter" style="width:74%"></i></div>
+      <div class="qty"><span>Ваш объём</span><div><button id="minus">−</button><b id="qty">1 000</b><button id="plus">+</button></div></div>
+      <button class="primary full" id="join">Подтвердить свой объём</button>
+      <button class="secondary full hidden" id="others">Демо: другие компании добирают объём</button>
+    </div>
+    <div class="resultCard">
+      <span class="eyebrow">ЭКОНОМИКА УЧАСТНИКА</span>
+      <h3 id="resultTitle">До достижения ступени</h3>
+      <div class="calc"><span>Сопоставимая отдельная закупка</span><b id="alternative">40 000 ₽</b></div>
+      <div class="calc"><span>Стоимость товара при 21 ₽</span><b id="goods">21 000 ₽</b></div>
+      <div class="calc"><span>Обязательные расходы · demo</span><b>1 500 ₽</b></div>
+      <div class="calc total"><span>Net Saving · demo</span><b id="saving">17 500 ₽</b></div>
+      <p>* Демонстрационный расчёт. Ceres не гарантирует фиксированный размер экономии. Реальный Net Saving считается после всех обязательных расходов.</p>
+    </div>
+  </div>
+</section>
+
+<section id="economics" class="soft">
+  <div class="wrap section">
+    <span class="eyebrow">РЕАЛЬНЫЕ ЦЕНОВЫЕ СТУПЕНИ ИЗ ИССЛЕДОВАНИЯ</span><h2>Объёмная цена — измеримая часть гипотезы.</h2>
+    <div class="evidence">
+      <article><span>Коробка для выпечки</span><b>40 ₽ → 20,50 ₽</b><small>1 000 → 10 000 шт.</small></article>
+      <article><span>Стакан PET 300 мл</span><b>10,69 ₽ → 8,86 ₽</b><small>1 000 → 10 000 шт.</small></article>
+      <article><span>Бумажный стакан 250 мл</span><b>8,43 ₽ → 7,43 ₽</b><small>1 000 → 5 000 шт.</small></article>
+      <article><span>Коробка</span><b>27,28 ₽ → 18,28 ₽</b><small>1 → 1 000 шт.</small></article>
+    </div>
+    <p class="caveat">Примеры используются как подтверждение существования объёмных ценовых ступеней. Итоговая выгода Ceres зависит от конкретной закупки и обязательных расходов.</p>
+  </div>
+</section>
+
+<section id="research" class="wrap section">
+  <span class="eyebrow">ПОЛЕВОЕ ИССЛЕДОВАНИЕ</span><h2>Мы начали не с интерфейса, а с проблемы бизнеса.</h2>
+  <div class="researchGrid">
+    <div class="donutCard"><div class="donut d93"><b>92,6%</b></div><h3>Цена зависит от объёма</h3><p>25 из 27 респондентов ответили «да».</p></div>
+    <div class="donutCard"><div class="donut d78"><b>77,8%</b></div><h3>Переплата из-за малого объёма</h3><p>21 из 27 респондентов подтвердили проблему.</p></div>
+    <div class="donutCard"><div class="donut d85"><b>85,2%</b></div><h3>Готовность объединять заказы</h3><p>23 из 27 — «да» или «скорее да».</p></div>
+  </div>
+  <div class="audience"><b>Кого опрашивали</b><span>8 кофеен · 7 пекарен · 6 кафе · 4 кондитерские · 2 ресторана / малых ресторана</span></div>
+</section>
+
+<section id="mvp" class="dark">
+ <div class="wrap section two">
+  <div><span class="eyebrow goldText">MVP</span><h2>Проверяем одну ключевую гипотезу реальной закупкой.</h2></div>
+  <div class="mvpList"><p><b>1 поставщик</b><span>реальные объёмные условия</span></p><p><b>1–3 SKU</b><span>регулярно закупаемые позиции</span></p><p><b>5+ компаний</b><span>независимые участники</span></p><p><b>1 общий пул</b><span>подтверждённые индивидуальные объёмы</span></p><p><b>Net Saving</b><span>считается после обязательных расходов</span></p></div>
+ </div>
+</section>
+
+<section class="wrap section final">
+  <span class="eyebrow">CERES</span><h2>Не заставлять малый бизнес покупать больше.<br>Дать ему силу большого общего заказа.</h2>
+  <a class="primary" href="#demo">Открыть демонстрацию</a>
+</section>
+</main>
+
+<footer><div class="wrap"><b>Ceres</b><span>Демонстрационный проект · КТИ — Команда Торговых Инноваций</span><span>Демо-данные отмечены отдельно</span></div></footer>
+<script src="./assets/app.js"></script>
+</body></html>

@@ -1,0 +1,23 @@
+{
+  "edition": "CERES SITE REBUILT FINAL",
+  "architecture": "plain HTML/CSS/JS, no external runtime dependencies",
+  "node_syntax_check": "passed",
+  "sections": [
+    "hero",
+    "proof strip",
+    "problem",
+    "mechanics",
+    "interactive demo",
+    "supplier price evidence",
+    "survey research",
+    "MVP",
+    "final CTA"
+  ],
+  "canonical_demo": "7400 + user quantity -> 8400 -> 10000 -> 25 to 21 RUB",
+  "guardrails": [
+    "no guaranteed savings",
+    "demo expenses labeled",
+    "no invented subscription price",
+    "no logistics claims"
+  ]
+}
